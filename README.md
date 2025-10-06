@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ETL Dashboard — FlowForge
 
-## Getting Started
+A modern ETL (Extract → Transform → Load) dashboard built with **Next.js**, **TypeScript**, and **PostgreSQL**, designed to refresh and deepen my full-stack development skills.  
+This project focuses on secure user authentication, data validation, and database interactions while applying clean UI design generated with AI and **shadcn/ui**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**FlowForge** is a micro web app that allows users to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Upload raw data (CSV files)
+- Validate and transform the data using schema-based rules
+- Load the cleaned data into a PostgreSQL database
+- Explore basic analytics or export results
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal of this project is to reinforce end-to-end full-stack fundamentals — from data handling and validation to UI/UX and security.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 15 (App Router, Server Actions)
+- TypeScript
+- shadcn/ui + Tailwind CSS
+- Zod — type-safe validation and sanitation
+- Recharts — simple data visualization
 
-## Deploy on Vercel
+### Backend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Prisma ORM
+- PostgreSQL (optionally SQLite for local development)
+- NextAuth.js (Auth.js) — authentication via credentials & OAuth
+- Node.js / Next.js API routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Tooling and Quality
+
+- ESLint + Prettier
+- Vitest (unit testing)
+- Playwright (end-to-end testing)
+- Pino (structured logging)
+- envsafe / zod-env — type-safe environment variables
+
+---
+
+## Key Features
+
+| Feature                | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| File Upload            | Upload CSV files for ETL processing              |
+| Data Validation        | Validate and sanitize data with Zod schemas      |
+| Transformation         | Apply lightweight transformations before loading |
+| Database Storage       | Persist processed data using Prisma & PostgreSQL |
+| Dashboard View         | View summary analytics and charts                |
+| Authentication         | Secure access with NextAuth.js                   |
+| Configurable Pipelines | Extend transformations or add new ones easily    |
+
+---
+
+## Learning Goals
+
+- Refresh and solidify TypeScript + Next.js full-stack development
+- Understand ETL pipelines and data flow patterns
+- Practice schema-driven validation and input sanitation
+- Explore SQL fundamentals using PostgreSQL
+- Build a secure, modern, minimal web app with proper architecture
+- Experiment with AI-assisted frontend design (using shadcn-generated components)
+
+---
+
+## Project Structure
